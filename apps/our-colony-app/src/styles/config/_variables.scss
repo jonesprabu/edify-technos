@@ -1,0 +1,43 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3rem;
+
+  /*========== Colors ==========*/
+  --hue: 174;
+  --sat: 63%;
+
+  --first-color: hsl(var(--hue), var(--sat), 40%);
+  --first-color-alt: hsl(var(--hue), var(--sat), 36%);
+  --title-color: hsl(var(--hue), 12%, 15%);
+  --text-color: hsl(var(--hue), 8%, 35%);
+  --body-color: hsl(var(--hue), 100%, 99%);
+  --container-color: #fff;
+  --button-color: #eee;
+  --button-hover: #ccc;
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Open Sans', sans-serif;
+  --button-font: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+
+  --button-font-size: 1em;
+  --h1-font-size: 1.5rem;
+  --normal-font-size: 0.938rem;
+  --tiny-font-size: 0.625rem;
+
+  // Responsive typography
+  @media screen and (min-width: 968px) {
+    --h1-font-size: 2.25rem;
+    --normal-font-size: 1rem;
+  }
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+
+  --box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); 
+  --box-shadow-hover: 0 5px 10px rgba(0,0,0,0.16), 0 5px 10px rgba(0,0,0,0.23);
+  --box-shadow-transition: all 0.3s cubic-bezier(.25,.8,.25,1);  
+}

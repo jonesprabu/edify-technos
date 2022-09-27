@@ -1,0 +1,18 @@
+<div class="header1">
+    <img src="./assets/img/pay-dues.png"/>
+    <div>
+        <div><button>Pay Now</button></div>
+        <div class="top-curvy-border"></div>
+        <div></div>        
+        <span>Dues:</span><span>2500</span>
+
+    </div>
+</div>
+<div>
+    <edify-technos-payment-due-card></edify-technos-payment-due-card>
+
+    <ng-container *ngFor="let monthlyDue of paymentData">
+        <edify-technos-payment-monthly-card [monthlyPaymentDetails]="monthlyDue"></edify-technos-payment-monthly-card>
+        <hr>
+    </ng-container>
+</div>

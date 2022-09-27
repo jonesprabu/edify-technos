@@ -4,7 +4,7 @@
   "projects": {
     "api": "apps/api",
     "api-interfaces": "libs/api-interfaces",
-    "our": "apps/our",
-    "our-e2e": "apps/our-e2e"
+    "our-colony-app": "apps/our-colony-app",
+    "our-colony-app-e2e": "apps/our-colony-app-e2e"
   }
 }

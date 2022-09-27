@@ -22,7 +22,7 @@ Nx supports many plugins which add capabilities for developing different types o
 
 These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
 
-Below are our core plugins:
+Below are our-colony-app core plugins:
 
 - [Angular](https://angular.io)
   - `ng add @nrwl/angular`

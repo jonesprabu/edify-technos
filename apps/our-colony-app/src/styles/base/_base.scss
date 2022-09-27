@@ -1,0 +1,49 @@
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  padding: 1em 1.5em;
+  border-radius: 0.5em;
+  background: var(--button-color);
+  border: none;
+  font-family: var(--button-font);
+  font-size: var(--button-font-size);
+  font-weight: bold;
+  box-shadow: var(--box-shadow);
+  transition: var(--box-shadow-transition);
+}
+
+button:hover {
+  // background: var(--button-hover);
+  box-shadow: var(--box-shadow-hover);
+  cursor: pointer;
+}

@@ -1,0 +1,90 @@
+{
+  "projectType": "application",
+  "sourceRoot": "apps/our-colony-app/src",
+  "prefix": "edify-technos",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/our-colony-app",
+        "index": "apps/our-colony-app/src/index.html",
+        "main": "apps/our-colony-app/src/main.ts",
+        "polyfills": "apps/our-colony-app/src/polyfills.ts",
+        "tsConfig": "apps/our-colony-app/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": ["apps/our-colony-app/src/favicon.ico", "apps/our-colony-app/src/assets"],
+        "styles": ["apps/our-colony-app/src/styles/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/our-colony-app/src/environments/environment.ts",
+              "with": "apps/our-colony-app/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "our-colony-app:build:production"
+        },
+        "development": {
+          "browserTarget": "our-colony-app:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "proxyConfig": "apps/our-colony-app/proxy.conf.json"
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "our-colony-app:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/our-colony-app/**/*.ts", "apps/our-colony-app/**/*.html"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/our-colony-app"],
+      "options": {
+        "jestConfig": "apps/our-colony-app/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
